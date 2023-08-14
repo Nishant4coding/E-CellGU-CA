@@ -20,6 +20,11 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+   const clicked=()=>{
+    setIsMenuOpen(!isMenuOpen)
+  }
+
+
   return (
     <Flex
       align="center"
@@ -115,6 +120,7 @@ const Navbar = () => {
             color="white"
             // _hover={{ bgColor: 'gray.600' }}
             mb={2}
+            onClick={clicked}
           >
             Home
           </Button>
@@ -125,8 +131,9 @@ const Navbar = () => {
             color="white"
             _hover={{ bgColor: 'gray.600' }}
             mb={2}
+            onClick={clicked}
           >
-            Courses
+            About Us
           </Button>
           <Button
             as={NavLink}
@@ -135,16 +142,9 @@ const Navbar = () => {
             color="white"
             _hover={{ bgColor: 'gray.600' }}
             mb={2}
+            onClick={clicked}
           >
-            Events
-          </Button>
-          <Button
-            as={NavLink}
-            to="/profile"
-            variant="ghost"
-            color="white"
-            _hover={{ bgColor: 'gray.600' }}
-          >
+
             Profile
           </Button>
         </Flex>
