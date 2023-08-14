@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   Box,
   Heading,
@@ -9,23 +9,23 @@ import {
   useDisclosure,
   Text,
   Avatar,
-} from '@chakra-ui/react';
-import { HamburgerIcon } from '@chakra-ui/icons';
-import './App.css';
-import Navbar from './Navbar';
-import ProfileDetails from './ProfileDetails';
+} from "@chakra-ui/react";
+import { HamburgerIcon } from "@chakra-ui/icons";
+import "./App.css";
+import Navbar from "./Navbar";
+import ProfileDetails from "./ProfileDetails";
 
 const Card = ({ children }) => (
   <Box
     borderWidth="1px"
-    alignContent={'center'}
-    justifyContent={'center'}
+    alignContent={"center"}
+    justifyContent={"center"}
     p={4}
     rounded="md"
     boxShadow="md"
     bgGradient="linear( #FFA500)"
     transition="transform 0.2s"
-    _hover={{ transform: 'translateY(-5px)', boxShadow: 'lg' }}
+    _hover={{ transform: "translateY(-5px)", boxShadow: "lg" }}
     mb={4}
   >
     {children}
@@ -41,19 +41,16 @@ const EventCard = ({ title, description }) => (
   </Card>
 );
 
-const PersonalDetails = () => (
- <ProfileDetails/>
-);
-
+const PersonalDetails = () => <ProfileDetails />;
 
 const dummyCertification = [
   {
-    title: 'Coding Competition Winner',
-    description: 'Secured 1st place in the national coding competition.',
+    title: "Coding Competition Winner",
+    description: "Secured 1st place in the national coding competition.",
   },
   {
-    title: 'Honor Roll',
-    description: 'Recognized for outstanding academic performance.',
+    title: "Honor Roll",
+    description: "Recognized for outstanding academic performance.",
   },
   // Add more achievements
 ];
@@ -74,12 +71,12 @@ const Certification = () => (
 );
 const dummyAcheivement = [
   {
-    title: 'Coding Competition Winner',
-    description: 'Secured 1st place in the national coding competition.',
+    title: "Coding Competition Winner",
+    description: "Secured 1st place in the national coding competition.",
   },
   {
-    title: 'Honor Roll',
-    description: 'Recognized for outstanding academic performance.',
+    title: "Honor Roll",
+    description: "Recognized for outstanding academic performance.",
   },
   // Add more achievements
 ];
@@ -99,15 +96,14 @@ const Achievements = () => (
   </Card>
 );
 
-
 const dummyCollaboratedEvents = [
   {
-    title: 'Web Development Workshop',
-    description: 'Hosted a workshop on front-end development.',
+    title: "Web Development Workshop",
+    description: "Hosted a workshop on front-end development.",
   },
   {
-    title: 'Hackathon 2023',
-    description: 'Co-organized a 2-day hackathon event.',
+    title: "Hackathon 2023",
+    description: "Co-organized a 2-day hackathon event.",
   },
   // Add more events
 ];
@@ -128,16 +124,16 @@ const CollaboratedEvents = () => (
 );
 
 const Profile = () => {
-  const [activeSection, setActiveSection] = useState('personal-details');
+  const [activeSection, setActiveSection] = useState("personal-details");
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const renderActiveSection = () => {
     switch (activeSection) {
-      case 'achievements':
+      case "achievements":
         return <Achievements />;
-      case 'certification':
+      case "certification":
         return <Certification />;
-      case 'collaborated-events':
+      case "collaborated-events":
         return <CollaboratedEvents />;
       default:
         return <PersonalDetails />;
@@ -146,11 +142,11 @@ const Profile = () => {
 
   return (
     <ChakraProvider>
-        {/* <Navbar/> */}
+      {/* <Navbar/> */}
       <CSSReset />
       <Box className="app-container">
         {/* Mobile menu */}
-        <Box className="mobile-menu" display={{ base: 'block', md: 'none' }}>
+        <Box className="mobile-menu" display={{ base: "block", md: "none" }}>
           <IconButton
             icon={<HamburgerIcon />}
             variant="ghost"
@@ -161,41 +157,41 @@ const Profile = () => {
         </Box>
 
         {/* Sidebar */}
-        <Box className="sidebar" display={{ base: 'none', md: 'block' }}>
+        <Box className="sidebar" display={{ base: "none", md: "block" }}>
           <Heading className="sidebar-heading" size="md" mb={4}>
             Dashboard
           </Heading>
           <Button
-          
-            onClick={() => setActiveSection('personal-details')}
+            onClick={() => setActiveSection("personal-details")}
             variant="ghost"
             color="white"
             mb={2}
-            _hover={{ bgColor: 'gray.700' }}
+            _hover={{ bgColor: "gray.700" }}
           >
             Personal Details
           </Button>
           <Button
-            onClick={() => setActiveSection('achievements')}
+            onClick={() => setActiveSection("achievements")}
             variant="ghost"
             color="white"
             mb={2}
-            _hover={{ bgColor: 'gray.700' }}
+            _hover={{ bgColor: "gray.700" }}
           >
             Achievements
           </Button>
           <Button
-            onClick={() => setActiveSection('certification')}
+            onClick={() => setActiveSection("certification")}
             variant="ghost"
             color="white"
-            _hover={{ bgColor: 'gray.700' }}
+            _hover={{ bgColor: "gray.700" }}
           >
-Certifications          </Button>
+            Certifications{" "}
+          </Button>
           <Button
-            onClick={() => setActiveSection('collaborated-events')}
+            onClick={() => setActiveSection("collaborated-events")}
             variant="ghost"
             color="white"
-            _hover={{ bgColor: 'gray.700' }}
+            _hover={{ bgColor: "gray.700" }}
           >
             Collaborated Events
           </Button>
@@ -207,8 +203,8 @@ Certifications          </Button>
 
       {/* Mobile sidebar */}
       <Box
-        className={`mobile-sidebar ${isOpen ? 'open' : ''}`}
-        display={{ base: 'block', md: 'none' }}
+        className={`mobile-sidebar ${isOpen ? "open" : ""}`}
+        display={{ base: "block", md: "none" }}
       >
         <IconButton
           icon={<HamburgerIcon />}
@@ -221,48 +217,48 @@ Certifications          </Button>
         <Button
           onClick={() => {
             onClose();
-            setActiveSection('personal-details');
+            setActiveSection("personal-details");
           }}
           variant="ghost"
           color="white"
           mb={2}
-          _hover={{ bgColor: 'gray.700' }}
+          _hover={{ bgColor: "gray.700" }}
         >
           Personal Details
         </Button>
         <Button
           onClick={() => {
             onClose();
-            setActiveSection('achievements');
+            setActiveSection("achievements");
           }}
           variant="ghost"
           color="white"
           mb={2}
-          _hover={{ bgColor: 'gray.700' }}
+          _hover={{ bgColor: "gray.700" }}
         >
           Achievements
         </Button>
         <Button
           onClick={() => {
             onClose();
-            setActiveSection('certification');
+            setActiveSection("certification");
           }}
           variant="ghost"
           color="white"
           mb={2}
-          _hover={{ bgColor: 'gray.700' }}
+          _hover={{ bgColor: "gray.700" }}
         >
-          Achievements
+          Certification
         </Button>
         <Button
           onClick={() => {
             onClose();
-            setActiveSection('collaborated-events');
+            setActiveSection("collaborated-events");
           }}
           variant="ghost"
           color="white"
           mb={2}
-          _hover={{ bgColor: 'gray.700' }}
+          _hover={{ bgColor: "gray.700" }}
         >
           Collaborated Events
         </Button>
