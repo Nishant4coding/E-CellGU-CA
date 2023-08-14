@@ -10,6 +10,7 @@ import ComponentStrips from './ComponentStrips';
 import Footer from './Footer';
 import ca from '../Assets/ca.gif'
 import Testimonials from './Testimonials';
+import About from './About';
 
 const LandingPage = () => {
   return (
@@ -52,6 +53,8 @@ const LandingPage = () => {
       <Events/>
       <ComponentStrips/>
       <Testimonials/>
+      <ComponentStrips/>
+      <About/>
       <ComponentStrips/>
       <Team/>
  <ComponentStrips/>

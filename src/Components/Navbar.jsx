@@ -126,7 +126,7 @@ const Navbar = () => {
           </Button>
           <Button
             as={NavLink}
-            to="/courses"
+            to="/about"
             variant="ghost"
             color="white"
             _hover={{ bgColor: 'gray.600' }}
@@ -137,7 +137,7 @@ const Navbar = () => {
           </Button>
           <Button
             as={NavLink}
-            to="/events"
+            to="/profile"
             variant="ghost"
             color="white"
             _hover={{ bgColor: 'gray.600' }}
