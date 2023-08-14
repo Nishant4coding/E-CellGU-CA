@@ -127,6 +127,10 @@ const Profile = () => {
   const [activeSection, setActiveSection] = useState("personal-details");
   const { isOpen, onOpen, onClose } = useDisclosure();
 
+  const handleLogout = () => {
+    window.location.href = "/login";
+  };
+
   const renderActiveSection = () => {
     switch (activeSection) {
       case "achievements":
@@ -214,6 +218,9 @@ const Profile = () => {
           onClick={onClose}
           mb={4}
         />
+        <Heading className="sidebar-heading" size="md" mb={4}>
+            Dashboard
+          </Heading>
         <Button
           onClick={() => {
             onClose();
@@ -261,6 +268,9 @@ const Profile = () => {
           _hover={{ bgColor: "gray.700" }}
         >
           Collaborated Events
+        </Button>
+        <Button onClick={handleLogout} variant="ghost" color="white" mt={4}>
+          Logout
         </Button>
       </Box>
     </ChakraProvider>
