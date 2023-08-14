@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/E-CellGU-CA/static/css/main.5e06b29b.css",
-    "main.js": "/E-CellGU-CA/static/js/main.1e4953a6.js",
+    "main.js": "/E-CellGU-CA/static/js/main.8e772c9b.js",
     "static/js/787.cda612ba.chunk.js": "/E-CellGU-CA/static/js/787.cda612ba.chunk.js",
     "static/media/ca.gif": "/E-CellGU-CA/static/media/ca.d3c69b5d8e95185eb230.gif",
     "static/media/user.jpg": "/E-CellGU-CA/static/media/user.ed3f4cb9d4b48918d668.jpg",
@@ -9,11 +9,11 @@
     "static/media/logo.svg": "/E-CellGU-CA/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/E-CellGU-CA/index.html",
     "main.5e06b29b.css.map": "/E-CellGU-CA/static/css/main.5e06b29b.css.map",
-    "main.1e4953a6.js.map": "/E-CellGU-CA/static/js/main.1e4953a6.js.map",
+    "main.8e772c9b.js.map": "/E-CellGU-CA/static/js/main.8e772c9b.js.map",
     "787.cda612ba.chunk.js.map": "/E-CellGU-CA/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5e06b29b.css",
-    "static/js/main.1e4953a6.js"
+    "static/js/main.8e772c9b.js"
   ]
 }
